@@ -1,0 +1,129 @@
+{
+	"name": "§c§n§lMessiah emergence",
+	"description": "§fYou are not of this world and§c cannot change your spawnpoint.§r§f When you spawn you will be placed at a §3random location in the world.§r",
+	"type": "origins:multiple",
+	"disable_anchor": {
+		"type": "origins:prevent_block_use",
+		"block_condition": {
+		  "type": "origins:block",
+		  "block": "minecraft:respawn_anchor"
+		}
+	},
+	"warning_bed": {
+		"type": "origins:action_on_block_use",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "function oneshot:warning_bed"
+		},
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "minecraft:beds"
+		}
+	},
+	"respawn_random": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:darkness",
+							"duration": 80,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:blindness",
+							"duration": 76,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:levitation",
+							"duration": 60,
+							"amplifier": 255,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				},
+				{    
+					"type": "origins:execute_command",
+					"command": "function oneshot:respawn"
+				}
+			]
+		},
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:apply_effect",
+					"effects": [
+						{
+							"effect": "minecraft:darkness",
+							"duration": 80,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:blindness",
+							"duration": 76,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						},
+						{
+							"effect": "minecraft:levitation",
+							"duration": 60,
+							"amplifier": 255,
+							"is_ambient": true,
+							"show_particles": false,
+							"show_icon": false
+						}
+					]
+				},
+				{    
+					"type": "origins:execute_command",
+					"command": "function oneshot:respawn"
+				}
+			]
+		},
+		"execute_chosen_when_orb": false
+	},
+	"warpdownfromend": {
+		"type": "origins:modify_falling",
+		"velocity": 10000.0,
+		"take_fall_damage": false,
+		"condition": {
+		    "type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:distance_from_coordinates",
+					"reference": "world_origin",
+					"ignore_x": true,
+					"ignore_z": true,
+					"shape": "cube",
+					"scale_reference_to_dimension": true,
+					"comparison": ">=",
+					"compare_to": 9990
+				},
+				{      
+					"type": "origins:distance_from_coordinates",
+					"reference": "world_origin",
+					"ignore_x": true,
+					"ignore_z": true,
+					"shape": "cube",
+					"scale_reference_to_dimension": true,
+					"comparison": "<",
+					"compare_to": 9999
+				}
+			]
+		}
+	}
+}

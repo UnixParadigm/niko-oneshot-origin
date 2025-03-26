@@ -1,0 +1,14 @@
+{
+	"name": "§3§n§lYoung",
+	"description": "§fBeing a child means you require§2 less food to sustain yourself§r§f and can§2 sneak into small openings.§r§f However§c you deal less knockback§r§f and§c have a shorter reach.§r            ",
+	"type": "origins:action_on_callback",
+	"entity_action_chosen": {
+		"type": "origins:execute_command",
+		"command": "function oneshot:size"
+	},
+	"entity_action_lost": {
+		"type": "origins:execute_command",
+		"command": "function oneshot:unsize"
+	},
+	"execute_chosen_when_orb": true
+}

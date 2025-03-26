@@ -1,0 +1,15 @@
+{
+    "name": "lightbulb_effects",
+    "description": "special",
+    "type": "origins:particle",
+    "particle": "minecraft:end_rod",
+    "frequency": 5,
+    "count": 1,
+    "speed": 0,
+    "spread": {
+        "x": 0.4,
+        "y": 0.3,
+        "z": 0.4
+    },
+    "offset_y": 1
+}

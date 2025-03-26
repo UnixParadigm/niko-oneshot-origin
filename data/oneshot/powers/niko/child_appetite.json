@@ -1,0 +1,38 @@
+{
+	"name": "§c§n§lHearty appetite",
+	"description": "§fHow can you be a messiah on an empty stomach? You§c cannot sprint at half hunger§r§f and§c gain slowness below half hunger.§r                        ",
+	"type": "origins:multiple",
+	"prevent_sprint_lowhunger": {
+		"condition": {
+			"type": "origins:food_level",
+			"compare_to": 10,
+			"comparison": "<="
+		},
+		"type": "origins:prevent_sprinting"
+	},
+	"slower_exhaust": {
+		"type": "origins:modify_exhaustion",
+		"modifier": {
+			"operation": "multiply_base_additive",
+			"value": -0.2
+		}
+	},
+	"slowness_exhaust": {
+		"condition": {
+			"type": "origins:food_level",
+			"compare_to": 10,
+			"comparison": "<"
+		},
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 1,
+		"duration_per_stack": 13,
+		"tick_rate": 10,
+		"effect": {
+			"effect": "minecraft:slowness",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false
+		}
+	}
+}

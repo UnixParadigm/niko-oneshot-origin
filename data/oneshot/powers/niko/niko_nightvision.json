@@ -1,0 +1,22 @@
+{
+    "name": "§2§n§lCat-eyes",
+    "description": "§fYour §eluminous, yellow eyes§f allow you to §2see better in the dark.§r               ",
+    "type": "origins:multiple",
+    "niko_nightvision_notwater": {
+        "condition": {
+            "inverted": true,
+            "type": "origins:submerged_in",
+            "fluid": "minecraft:water"
+        },
+        "type": "origins:night_vision",
+        "strength": 0.12
+    },
+    "niko_nightvision_water": {
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "minecraft:water"
+        },
+        "type": "origins:night_vision",
+        "strength": 0.06
+    }
+}

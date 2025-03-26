@@ -1,0 +1,57 @@
+{
+    "name": "§c§n§lScared of Heights",
+    "description": "§3Climbing a ladder§f or §3falling from a moderate height§f causes §cweakness§r and §cblindness.§r                        ",
+    "type": "origins:multiple",
+	"darkness": {
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": ">=",
+			"compare_to": 7
+		},
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 1,
+		"duration_per_stack": 53,
+		"tick_rate": 1,
+		"effect": {
+			"effect": "minecraft:darkness",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false
+		}
+	},
+	"blindness": {
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": ">=",
+			"compare_to": 19
+		},
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 1,
+		"duration_per_stack": 59,
+		"tick_rate": 1,
+		"effects": [
+			{
+				"effect": "minecraft:weakness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			}
+		]
+	},
+	"shaking": {
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": ">=",
+			"compare_to": 4
+		},
+	    "type": "origins:shaking"
+	}
+}

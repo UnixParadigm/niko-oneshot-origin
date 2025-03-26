@@ -1,0 +1,22 @@
+{
+    "name": "§eCat-person",
+    "description": "A bright-eyed child with a curious heart, Niko was summoned to play the role of the Sun-Bearer and Messiah.",
+    "powers": [
+        "oneshot:niko/lightbulb",
+        "oneshot:niko/niko_nightvision",
+        "oneshot:niko/niko_speed",
+        "oneshot:niko/niko_size",
+        "oneshot:niko/fear_of_climbing",
+        "oneshot:niko/fear_of_falling",
+        "oneshot:niko/child_appetite",
+        "oneshot:niko/not_native",
+        "oneshot:niko/pancake",
+        "oneshot:niko/fear_of_thunderstorm",
+        "oneshot:niko/cat_sound_on_hurt"
+    ],
+    "icon": {
+        "item": "minecraft:redstone_lamp",
+        "amount": 1
+    },
+    "impact": 2
+}

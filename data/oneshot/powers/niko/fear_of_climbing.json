@@ -1,0 +1,77 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+	"darkness": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:climbing"
+				},
+				{      
+					"type": "origins:on_block",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:stacking_status_effect",
+		"min_stacks": -3,
+		"max_stacks": 1,
+		"duration_per_stack": 53,
+		"tick_rate": 10,
+		"effect": {
+			"effect": "minecraft:darkness",
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false
+		}	
+	},
+	"blindness": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:climbing"
+				},
+				{      
+					"type": "origins:on_block",
+					"inverted": true
+				}
+			]
+		},
+		"type": "origins:stacking_status_effect",
+		"min_stacks": -3,
+		"max_stacks": 1,
+		"duration_per_stack": 59,
+		"tick_rate": 15,
+		"effects": [
+			{
+				"effect": "minecraft:weakness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			},
+			{
+				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": true
+			}
+		]
+	},
+	"shaking": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:climbing"
+				},
+				{      
+					"type": "origins:on_block",
+					"inverted": true
+				}
+			]
+		},
+	    "type": "origins:shaking"
+	}
+}

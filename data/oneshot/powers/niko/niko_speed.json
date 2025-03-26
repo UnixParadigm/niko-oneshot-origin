@@ -1,0 +1,20 @@
+{
+    "name": "§2§n§lOn little cat feet",
+    "description": "§fYou have §2increased movement speed§r§f and §2reduced fall damage.§r               ",
+    "type": "origins:multiple",
+    "air_speed": {
+        "type": "origins:attribute_modify_transfer",
+        "attribute": "minecraft:generic.movement_speed",
+        "class": "modify_air_speed",
+        "multiplier": 1
+    },
+    "move_speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.13
+        },
+        "update_health": true
+    }
+}

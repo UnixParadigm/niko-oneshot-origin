@@ -1,0 +1,11 @@
+{
+    "hidden": true,
+    "type": "origins:action_when_damage_taken",
+    "entity_action": {
+        "type": "origins:play_sound",
+        "sound": "entity.cat.hurt",
+        "volume": 1,
+        "pitch": 1
+    },
+    "cooldown": 30
+}

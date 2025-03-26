@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:predicate",
+        "predicate": "oneshot:weather/is_thunderstorm"
+    },
+    "type": "origins:prevent_sleep",
+    "message": "§eNiko§f cant sleep during a thunderstorm...",
+    "set_spawn_point": true
+}
