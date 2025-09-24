@@ -1,6 +1,6 @@
 {
-    "name": "§2§n§lCat-eyes",
-    "description": "§fYour §eluminous, yellow eyes§f allow you to §2see better in the dark.§r               ",
+    "name": "§2§lCat-eyes",
+    "description": "§fYour §eluminous, yellow eyes§f allow you to §2see better in the dark§f.§r               ",
     "type": "origins:multiple",
     "niko_nightvision_notwater": {
         "condition": {

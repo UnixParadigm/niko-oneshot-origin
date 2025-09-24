@@ -8,7 +8,7 @@
 				{
 					"type": "origins:climbing"
 				},
-				{      
+				{
 					"type": "origins:on_block",
 					"inverted": true
 				}
@@ -24,7 +24,7 @@
 			"is_ambient": true,
 			"show_particles": false,
 			"show_icon": false
-		}	
+		}
 	},
 	"blindness": {
 		"condition": {
@@ -33,7 +33,7 @@
 				{
 					"type": "origins:climbing"
 				},
-				{      
+				{
 					"type": "origins:on_block",
 					"inverted": true
 				}
@@ -66,12 +66,12 @@
 				{
 					"type": "origins:climbing"
 				},
-				{      
+				{
 					"type": "origins:on_block",
 					"inverted": true
 				}
 			]
 		},
-	    "type": "origins:shaking"
+		"type": "origins:shaking"
 	}
 }

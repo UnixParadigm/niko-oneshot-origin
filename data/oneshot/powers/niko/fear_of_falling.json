@@ -1,14 +1,14 @@
 {
-    "name": "§c§n§lScared of Heights",
-    "description": "§3Climbing a ladder§f or §3falling from a moderate height§f causes §cweakness§r and §cblindness.§r                        ",
+    "name": "§4§lScared of Heights",
+    "description": "§fClimbing a ladder or falling from a moderate height causes §4weakness§r and §4blindness§f. Using an elytra slowly §4drains hunger.§f§r                                                ",
     "type": "origins:multiple",
 	"darkness": {
+		"type": "origins:stacking_status_effect",
 		"condition": {
 			"type": "origins:fall_distance",
 			"comparison": ">=",
 			"compare_to": 7
 		},
-		"type": "origins:stacking_status_effect",
 		"min_stacks": 0,
 		"max_stacks": 1,
 		"duration_per_stack": 53,
@@ -21,12 +21,12 @@
 		}
 	},
 	"blindness": {
+		"type": "origins:stacking_status_effect",
 		"condition": {
 			"type": "origins:fall_distance",
 			"comparison": ">=",
 			"compare_to": 19
 		},
-		"type": "origins:stacking_status_effect",
 		"min_stacks": 0,
 		"max_stacks": 1,
 		"duration_per_stack": 59,
@@ -47,11 +47,27 @@
 		]
 	},
 	"shaking": {
+		"type": "origins:shaking",
 		"condition": {
 			"type": "origins:fall_distance",
 			"comparison": ">=",
 			"compare_to": 4
-		},
-	    "type": "origins:shaking"
+		}
+	},
+	"disablesprint": {
+		"type": "origins:prevent_sprinting",
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": ">=",
+			"compare_to": 19
+		}
+	},
+	"elytra-exhaustion": {
+		"type": "origins:exhaust",
+		"interval": 7,
+		"exhaustion": 0.2,
+		"condition": {
+			"type": "origins:fall_flying"
+		}
 	}
 }

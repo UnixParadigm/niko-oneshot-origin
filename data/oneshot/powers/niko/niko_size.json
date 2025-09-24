@@ -1,6 +1,6 @@
 {
-	"name": "§3§n§lYoung",
-	"description": "§fBeing a child means you require§2 less food to sustain yourself§r§f and can§2 sneak into small openings.§r§f However§c you deal less knockback§r§f and§c have a shorter reach.§r            ",
+	"name": "§3§lYoung",
+	"description": "§fBeing a child means you require §2less food to sustain yourself§r§f and can §2sneak into small openings.§r§f However you deal §4less knockback§r§f and have a §4shorter reach§f.§r            ",
 	"type": "origins:action_on_callback",
 	"entity_action_chosen": {
 		"type": "origins:execute_command",
