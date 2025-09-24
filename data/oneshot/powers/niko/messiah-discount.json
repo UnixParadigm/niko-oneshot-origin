@@ -1,0 +1,30 @@
+{
+	"name": "§2§lMessiah's favor§r§7",
+	"description": "§fThe natives of this world recognize the importance of your mission and offer you §2reduced prices§f.                                §r",
+	"type": "origins:action_over_time",
+	"interval": 18,
+	"entity_action": {
+		"type": "origins:area_of_effect",
+		"radius": 16,
+		"bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:entity_type",
+				"entity_type": "minecraft:villager"
+			}
+		},
+		"bientity_action": {
+			"type": "origins:actor_action",
+			"action": {
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:hero_of_the_village",
+					"duration": 19,
+					"is_ambient": false,
+					"show_particles": false,
+					"show_icon": false
+				}
+			}
+		}
+	}
+}

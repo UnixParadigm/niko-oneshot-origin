@@ -1,6 +1,6 @@
 {
-	"name": "§e§n§lLightbearer",
-	"description": "§fAs the messiah you have access to a large lightbulb, it's the §e§lSun!§r§f Press your primary ability key to §2illuminate nearby creatures§r §3(including yourself)§r§f which grants them §2night vision§r§f and causes them to §2start glowing.§r               ",
+	"name": "§e§lLightbearer",
+	"description": "§fAs the messiah you have access to a large lightbulb, it's the §e§l§nSun!§r§f Press your primary ability key to §2illuminate nearby creatures§r §3(including yourself)§r§f which grants them §2night vision§r§f and causes them to §2start glowing§f.§r               ",
 	"type": "origins:active_self",
 	"entity_action": {
 		"type": "origins:and",
@@ -16,12 +16,12 @@
 					"type": "origins:target_action",
 					"action": {
 						"type": "origins:apply_effect",
-							"effect": {
-								"effect": "minecraft:glowing",
-								"duration": 600,
-								"show_particles": false,
-								"show_icon": true
-							}
+						"effect": {
+							"effect": "minecraft:glowing",
+							"duration": 620,
+							"show_particles": false,
+							"show_icon": true
+						}
 					}
 				}
 			},
@@ -35,13 +35,18 @@
 				"bientity_action": {
 					"type": "origins:target_action",
 					"action": {
-						"type": "origins:apply_effect",
-						"effect": {
-							"effect": "minecraft:night_vision",
-							"duration": 7200,
-							"show_particles": false,
-							"show_icon": true
-						}
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:night_vision",
+									"duration": 12000,
+									"show_particles": false,
+									"show_icon": true
+								}
+							}
+						]
 					}
 				}
 			},
@@ -60,20 +65,6 @@
 					"pitch": 2
 				},
 				"ticks": 5
-			},
-			{
-				"type": "origins:grant_power",
-				"power": "oneshot:niko/lightbulb_effects",
-				"source": "0"
-			},
-			{
-				"type": "origins:delay",
-				"action": {
-					"type": "origins:revoke_power",
-					"power": "oneshot:niko/lightbulb_effects",
-					"source": "0"
-				},
-				"ticks": 600
 			}
 		]
 	},
